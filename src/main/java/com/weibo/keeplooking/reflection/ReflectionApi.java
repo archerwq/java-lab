@@ -185,7 +185,8 @@ public class ReflectionApi {
      * @throws InstantiationException
      * @throws ClassNotFoundException
      */
-    public static Object newInstance(String className)
+    @SuppressWarnings("deprecation")
+	public static Object newInstance(String className)
             throws IllegalAccessException, InstantiationException,
             ClassNotFoundException {
         return Class.forName(className).newInstance();

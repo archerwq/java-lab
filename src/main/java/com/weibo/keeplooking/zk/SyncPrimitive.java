@@ -21,7 +21,8 @@ public class SyncPrimitive implements Watcher {
     protected static Integer mutex;
     protected String root;
 
-    protected SyncPrimitive(String address) {
+    @SuppressWarnings("deprecation")
+	protected SyncPrimitive(String address) {
         if (zk == null) {
             try {
                 LOGGER.info("Starting ZK client...");

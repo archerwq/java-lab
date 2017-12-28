@@ -36,7 +36,8 @@ public class GenericsDemo {
 
     @Test
     public void testGen() {
-        Gen<Integer> genInt = new Gen<Integer>(new Integer(5));
+        @SuppressWarnings("deprecation")
+		Gen<Integer> genInt = new Gen<Integer>(new Integer(5));
         genInt.showType();
 
         Gen<String> genStr = new Gen<String>("5");

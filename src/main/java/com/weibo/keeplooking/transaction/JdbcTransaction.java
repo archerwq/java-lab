@@ -141,7 +141,8 @@ public class JdbcTransaction {
         ps.close();
     }
 
-    private void connect() throws InstantiationException,
+    @SuppressWarnings("deprecation")
+	private void connect() throws InstantiationException,
             IllegalAccessException, ClassNotFoundException, SQLException {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
         connection = DriverManager

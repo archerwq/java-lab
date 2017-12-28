@@ -12,7 +12,7 @@
 	<!-- Send debug messages to a file -->
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>/Users/qwang/dev/logs/java_toolbox_lbk.log</file>
+		<file>java_toolbox_lbk.log</file>
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
 			<Pattern>%level %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %logger{5} - %msg %n</Pattern>
 		</encoder>
@@ -46,7 +46,7 @@
 	</logger>
 
 	<!-- By default, the level of the root level is set to DEBUG -->
-	<root level="INFO">
+	<root level="DEBUG">
 		<appender-ref ref="STDOUT" />
 	</root>
 

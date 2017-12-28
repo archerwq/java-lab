@@ -130,9 +130,10 @@ public class TryOut {
     }
 
     @Test
+    @SuppressWarnings("deprecation")
     public void displayNumber() {
         Locale currentLocale = new Locale("lt", "LT", "");
-        Integer quantity = new Integer(123456);
+		Integer quantity = new Integer(123456);
         Double amount = new Double(345987.246);
 
         NumberFormat numberFormatter = NumberFormat.getNumberInstance(currentLocale);
@@ -523,7 +524,8 @@ public class TryOut {
         }
     }
 
-    @Test
+    @SuppressWarnings("deprecation")
+	@Test
     public void testIntEqual() {
         Assert.assertTrue((new Integer(1)) == 1);
     }
